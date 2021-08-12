@@ -3,7 +3,7 @@ var luckyNumber=document.querySelector('#luckyNumber');
 var checkButton=document.querySelector('#checkButton');
 var output=document.querySelector('#result');
 var birthdayTotal = 0;
-function birthdayCalculator(){
+function birthdayTotalCalculator(){
     for(i=0; i<Number(birthdayInput.value.length); i++){
         birthdayTotal = birthdayTotal + Number(birthdayInput.value[i]);
 
@@ -11,9 +11,9 @@ function birthdayCalculator(){
 }
 
 checkButton.addEventListener('click', function luckCalculator(){
-    birthdayCalculator();
+    birthdayTotalCalculator();
     if (birthdayTotal % Number(luckyNumber.value) === 0){
-        console.log('lucky');
+        output.innerText = 'You are lucky!'
     } else
-    {console.log('unlucky');}
+    {output.innerText = 'You are unlucky!'}
 })
