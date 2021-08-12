@@ -33,9 +33,9 @@ checkButton.addEventListener('click', function luckCalculator(){
     birthdaySumCalculator();
     if(sum&&luckyNumber.value){
         if (sum % Number(luckyNumber.value) === 0){
-            output.innerText = 'You are lucky!💫'
+            output.innerText = 'Your birthday is lucky!💫'
         } else
-        {output.innerText = 'You are unlucky!☹️'}
+        {output.innerText = 'Your birthday is unlucky!☹️'}
 
     }else {
         output.innerText = 'Enter both the values!!😡'

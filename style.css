@@ -24,12 +24,13 @@ input{
     }
 
 button{
-        padding: 0.7 rem;
+        padding: 0.7rem;
         margin: 0.7rem auto;
         display: block;
         background-color: var(--secondary-color);
         color: var(--primary-color);
         border-width: 1px;
+        border-radius: 0.3rem;
         }
 
 label, h1{
