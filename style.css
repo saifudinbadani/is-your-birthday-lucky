@@ -1,5 +1,5 @@
 .mainBody{
-    width: 50vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,4 +9,40 @@
 input{
     padding: 0.5 rem;
     margin: 0.5rem auto;
+}
+
+/* footer */
+
+.list-non-bullet {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.list-item-inline{
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+.footer {
+    background-color: var(--primary-color);
+    padding: 4rem  1rem;
+    text-align: center;
+    color: black;
+    border-top-left-radius: 1rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .link {
+    color: black;
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: large;
+}
+
+.footer ul {
+    padding-inline-start: 0px;
 }
