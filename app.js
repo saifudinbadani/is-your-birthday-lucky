@@ -26,10 +26,7 @@ function birthdaySumCalculator(){
     
     
     
-    
-
-
-checkButton.addEventListener('click', function luckCalculator(){
+function luckCalculator(){
     birthdaySumCalculator();
     if(sum&&luckyNumber.value){
         if (sum % Number(luckyNumber.value) === 0){
@@ -41,4 +38,7 @@ checkButton.addEventListener('click', function luckCalculator(){
         output.innerText = 'Enter both the values!!😡'
     }
    
-})
+}
+
+
+checkButton.addEventListener('click',luckCalculator)
