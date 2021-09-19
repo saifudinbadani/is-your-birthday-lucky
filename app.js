@@ -3,32 +3,36 @@ var luckyNumber=document.querySelector('#luckyNumber');
 var checkButton=document.querySelector('#checkButton');
 var output=document.querySelector('#result');
 var birthdayTotal = '';
-var sum = 0;
+
+function getBirthdayDateArray(){
+    return birthdayInput.value.split('-');
+}
 
 
-
-function birthdaySumCalculator(){
-    var birthdayArray= birthdayInput.value.split('-');
-    
-
-    for(i=0; i<birthdayArray.length; i++){
-        birthdayTotal = birthdayTotal + birthdayArray[i];
-        
+// function to return date sum 
+function parseDate() {
+    let birthdayArray = getBirthdayDateArray();
+    let birthdayString = '';
+    for(i=0; i< birthdayArray.length; i++){
+        birthdayString += birthdayArray[i].split('').join('');
     }
 
+    return birthdayString.split('');
+}
 
-    for (i=0; i<birthdayTotal.length; i++){
-            sum = sum + Number(birthdayTotal.charAt(i));
-            
-        } 
-        
+function dateSum() {
+    let total = 0;
+    let dateArray = parseDate();
+    for(i=0; i < dateArray.length; i++){
+        total += Number(dateArray[i])
     }
-    
-    
-    
+    return total;
+}
+
 function luckCalculator(){
-    birthdaySumCalculator();
-    if(sum&&luckyNumber.value){
+    let sum = dateSum();
+
+    if(sum && luckyNumber.value){
         if (sum % Number(luckyNumber.value) === 0){
             output.innerText = 'Your birthday is lucky!💫'
         } else
